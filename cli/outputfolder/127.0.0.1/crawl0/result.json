@@ -1,0 +1,112 @@
+{
+  "states" : {
+    "index" : {
+      "name" : "index",
+      "url" : "http://127.0.0.1:4000",
+      "candidateElements" : [ {
+        "top" : 410,
+        "left" : 506,
+        "xpath" : "/HTML[1]/BODY[1]/MAIN[1]/DIV[1]/DIV[1]/MAIN[1]/A[1]",
+        "width" : 142,
+        "height" : 17
+      }, {
+        "top" : 324,
+        "left" : 403,
+        "xpath" : "/HTML[1]/BODY[1]/MAIN[1]/DIV[1]/DIV[1]/MAIN[1]/FORM[1]/BUTTON[1]",
+        "width" : 350,
+        "height" : 58
+      } ],
+      "fanIn" : 2,
+      "fanOut" : 2,
+      "id" : 0,
+      "failedEvents" : [ ],
+      "hasNearDuplicate" : false,
+      "distToNearestState" : -1.0,
+      "cluster" : 0,
+      "timeAdded" : 1753894115564,
+      "onURL" : true,
+      "nearestState" : "null"
+    },
+    "state1" : {
+      "name" : "state1",
+      "url" : "http://127.0.0.1:4000/sign_up",
+      "candidateElements" : [ {
+        "top" : 506,
+        "left" : 553,
+        "xpath" : "/HTML[1]/BODY[1]/MAIN[1]/DIV[1]/DIV[1]/MAIN[1]/A[1]",
+        "width" : 49,
+        "height" : 17
+      }, {
+        "top" : 421,
+        "left" : 403,
+        "xpath" : "/HTML[1]/BODY[1]/MAIN[1]/DIV[1]/DIV[1]/MAIN[1]/FORM[1]/BUTTON[1]",
+        "width" : 350,
+        "height" : 58
+      } ],
+      "fanIn" : 1,
+      "fanOut" : 1,
+      "id" : 1,
+      "failedEvents" : [ ],
+      "hasNearDuplicate" : false,
+      "distToNearestState" : -1.0,
+      "cluster" : 1,
+      "timeAdded" : 1753894116555,
+      "onURL" : false,
+      "nearestState" : "index"
+    }
+  },
+  "edges" : [ {
+    "from" : "index",
+    "to" : "state1",
+    "text" : "Create new account",
+    "id" : "xpath /HTML[1]/BODY[1]/MAIN[1]/DIV[1]/DIV[1]/MAIN[1]/A[1]",
+    "element" : "Element{node=[A: null], tag=A, text=Create new account, attributes={data-reactid=.0.0.0.2, href=/sign_up}}",
+    "eventType" : "click"
+  }, {
+    "from" : "state1",
+    "to" : "index",
+    "text" : "Sign in",
+    "id" : "xpath /HTML[1]/BODY[1]/MAIN[1]/DIV[1]/DIV[1]/MAIN[1]/A[1]",
+    "element" : "Element{node=[A: null], tag=A, text=Sign in, attributes={data-reactid=.0.0.0.2, href=/sign_in}}",
+    "eventType" : "click"
+  }, {
+    "from" : "index",
+    "to" : "index",
+    "text" : "http://127.0.0.1:4000",
+    "id" : "url http://127.0.0.1:4000",
+    "element" : "unkown",
+    "eventType" : "reload"
+  } ],
+  "statistics" : {
+    "duration" : "2 seconds",
+    "crawlPaths" : 2,
+    "averageDomSize" : "2.24 kB",
+    "edges" : 3,
+    "startDate" : "2025-07-30 22:48:20 GMT+06:00",
+    "stateStats" : {
+      "leastFanOut" : {
+        "id" : "state1",
+        "count" : 1
+      },
+      "leastFanIn" : {
+        "id" : "state1",
+        "count" : 1
+      },
+      "mostFanOut" : {
+        "id" : "index",
+        "count" : 2
+      },
+      "mostFanIn" : {
+        "id" : "index",
+        "count" : 2
+      },
+      "totalNumberOfStates" : 2,
+      "urls" : {
+        "http://127.0.0.1:4000" : [ "index" ],
+        "http://127.0.0.1:4000/sign_up" : [ "state1" ]
+      }
+    },
+    "failedEvents" : 0
+  },
+  "exitStatus" : "EXHAUSTED"
+}
